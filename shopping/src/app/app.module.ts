@@ -10,12 +10,15 @@ import {NgxsModule} from "@ngxs/store";
 import {NgxsReduxDevtoolsPluginModule} from "@ngxs/devtools-plugin";
 import {AuthState} from "./store/states/auth.state";
 import { HomeComponent } from './pages/home/home.component';
+import { GoodItemComponent } from './components/good-item/good-item.component';
+import {GoodsState} from "./store/states/goods.state";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
+    GoodItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { HomeComponent } from './pages/home/home.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxsModule.forRoot([AuthState]),
+    NgxsModule.forRoot([AuthState, GoodsState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [],

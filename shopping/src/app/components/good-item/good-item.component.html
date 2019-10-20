@@ -1,0 +1,8 @@
+<div class="card" [ngClass]="{hot: good.hot}">
+  <div class="card-header">
+    <h2>{{ good.name }}</h2>
+    <button class="btn right" (click)="addToCard(good)"><b>+</b></button>
+  </div>
+  <small>{{ good.price }}</small>
+
+</div>

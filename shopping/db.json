@@ -1,0 +1,28 @@
+{
+  "goods": [
+    {
+      "id": "1",
+      "name": "Milk",
+      "price": "1$",
+      "hot": false
+    },
+    {
+      "id": "2",
+      "name": "Apples",
+      "price": "2$",
+      "hot": true
+    },
+    {
+      "id": "3",
+      "name": "Ice cream",
+      "price": "0.5$",
+      "hot": true
+    },
+    {
+      "id": "4",
+      "name": "Potato",
+      "price": "0.8$",
+      "hot": false
+    }
+  ]
+}

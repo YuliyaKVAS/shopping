@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div class="posts">
+  <app-good-item
+    *ngFor="let good of goods | async"
+    [good]="good"
+  >
+  </app-good-item>
+</div>

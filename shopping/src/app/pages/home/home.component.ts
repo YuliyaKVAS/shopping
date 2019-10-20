@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Select, Store} from "@ngxs/store";
+import {GoodsState} from "../../store/states/goods.state";
+import {Observable} from "rxjs";
+import {Good} from "../../models/good.model";
+import {GetGoods} from "../../store/actions/goods.actions";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  @Select(GoodsState.getGoodsList) goods: Observable<Good[]>;
+
+  constructor(private store: Store) { }
 
   ngOnInit() {
+    this.store.dispatch(new GetGoods());
   }
 
 }
